@@ -1,0 +1,62 @@
+{
+  "schema": "glaciereq.repo-canonical-position.v1",
+  "repository": "GlacierEQ/nvidia-gradient-integrity-quorum",
+  "position_state": "RESOLVED",
+  "role": "company_specific_specialist_system",
+  "company_target": "NVIDIA",
+  "canonical_identity": "gradient-integrity-quorum",
+  "unique_value": [
+    "distributed gradient reports are screened for both declared finiteness and finite numeric norm before commit authority is granted",
+    "poison ranks can be isolated while a sufficiently healthy quorum continues, separating degraded operation from total abort",
+    "insufficient healthy participation or a fully poisoned set fails closed to ABORT rather than committing contaminated aggregate state",
+    "each quorum decision produces a deterministic receipt binding decision, sorted poison ranks, healthy count, and fingerprint"
+  ],
+  "lineage_distinction": {
+    "GlacierEQ/nvidia-nan-circuit-breaker": "owns temporal circuit-breaking after consecutive non-finite training steps; complementary per-step stability boundary, not distributed rank quorum admission",
+    "GlacierEQ/nvidia-gpu-health": "broader GPU-health lens referenced by the project; no exercised integration is claimed",
+    "GlacierEQ/nvidia-deep-reasoning": "broader NVIDIA reasoning/training lens referenced by the project; no exercised integration is claimed"
+  },
+  "capability_contribution": {
+    "family": "distributed_gradient_integrity_admission",
+    "extractable_mechanisms": [
+      "finite-gradient rank voting",
+      "poison-rank isolation",
+      "minimum healthy-ratio admission",
+      "degraded isolate versus abort decision",
+      "all-poison hard abort",
+      "deterministic quorum receipts"
+    ],
+    "ownership": "This repository remains the owning NVIDIA-specialist implementation of distributed gradient integrity admission; capability extraction preserves repository identity and lineage."
+  },
+  "integration_policy": {
+    "preserve_repository_identity": true,
+    "preserve_lineage": true,
+    "presentation_independent": true,
+    "size_or_loc_not_dispositive": true,
+    "absorption_requires_functional_equivalence": true,
+    "absorption_requires_proof_equivalence": true
+  },
+  "relationships": [
+    {"repository": "GlacierEQ/nvidia-nan-circuit-breaker", "kind": "COMPLEMENTARY_NUMERICAL_STABILITY_COMPONENT", "integration_state": "NOT_CLAIMED"},
+    {"repository": "GlacierEQ/nvidia-gpu-health", "kind": "REFERENCE_COMPLEMENT", "integration_state": "NOT_CLAIMED"},
+    {"repository": "GlacierEQ/nvidia-deep-reasoning", "kind": "REFERENCE_COMPLEMENT", "integration_state": "NOT_CLAIMED"}
+  ],
+  "next_evolution": "Add weighted/quorum-authenticated rank reports, topology-aware isolation, bounded rejoin criteria, and cross-step poison provenance while preserving fail-closed abort when healthy participation falls below the declared threshold.",
+  "evidence_refs": [
+    "README.md",
+    "ISSUE_CONTRACT.md",
+    "src/gradient_quorum.py",
+    "tests/test_gradient_quorum.py",
+    "tests/test_adversarial.py",
+    "machine/target-contract.json",
+    "machine/proof_receipt.json",
+    "machine/operability_receipt.json",
+    "machine/promotion_authority.json"
+  ],
+  "nonclaims": [
+    "no NVIDIA affiliation",
+    "no NVIDIA internal architecture claim",
+    "not a production distributed-training controller",
+    "repository relationships do not imply exercised integration"
+  ]
+}

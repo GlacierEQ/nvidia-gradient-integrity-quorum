@@ -1,1 +1,21 @@
-{"capabilities": ["hyper-scaling"]}
+{
+  "schema": "glaciereq.repo-capabilities.v1",
+  "repository": "GlacierEQ/nvidia-gradient-integrity-quorum",
+  "capability_family": "distributed_gradient_integrity_admission",
+  "capabilities": [
+    "finite-gradient-rank-voting",
+    "poison-rank-isolation",
+    "minimum-healthy-ratio-admission",
+    "isolate-versus-abort-decision",
+    "all-poison-hard-abort",
+    "deterministic-quorum-receipts"
+  ],
+  "evidence_refs": [
+    "src/gradient_quorum.py",
+    "tests/test_gradient_quorum.py",
+    "tests/test_adversarial.py",
+    "machine/proof_receipt.json",
+    "machine/canonical-position.json"
+  ],
+  "truth_boundary": "Repository-local distributed gradient admission mechanisms only. No NVIDIA adoption, production training-controller deployment, or exercised integration with adjacent NVIDIA repositories is implied."
+}
