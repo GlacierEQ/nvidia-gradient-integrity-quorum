@@ -1,0 +1,11 @@
+{
+  "schema": "glaciereq.promotion-authority-grant.v1",
+  "repository": "GlacierEQ/nvidia-gradient-integrity-quorum",
+  "source_sha": "2b3935d7a2f84c54f9ce2069a88bd27b21ee0d80a53bdc084d54a74d97a56a76",
+  "proof_receipt_digest": "639c3d0356d0e22b4efd5d157bf487c36f16a65de4126be9472612606d73896e",
+  "not_after": 1788927149.234226,
+  "mac": "bed3bb2d1607cc302180ec2bd6b50e9799d8b7f97895aeec146450de0b987c42",
+  "issuer": "local_operator_promotion_authority",
+  "verified": true,
+  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
+}

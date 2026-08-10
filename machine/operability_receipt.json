@@ -1,0 +1,24 @@
+{
+  "schema": "glaciereq.operability-receipt.v1",
+  "repository": "GlacierEQ/nvidia-gradient-integrity-quorum",
+  "at": "2026-08-10T04:12Z",
+  "source_sha": "2b3935d7a2f84c54f9ce2069a88bd27b21ee0d80a53bdc084d54a74d97a56a76",
+  "entry": "scripts/operate.py",
+  "primary_output": {
+    "module": "gradient_quorum",
+    "ok": true,
+    "repository": "GlacierEQ/nvidia-gradient-integrity-quorum",
+    "smoke": {
+      "args": [
+        "{'elite': True, 'n': 1}"
+      ],
+      "content_checked": true,
+      "invoked": true,
+      "kind": "fn",
+      "name": "digest",
+      "result": "0540cf30b3be558aaf2c1fe8e7962db3939844e3557f203179a6393959aa103b"
+    }
+  },
+  "dual_run_ok": true,
+  "result": "PASS"
+}

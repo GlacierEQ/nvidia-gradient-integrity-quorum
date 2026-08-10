@@ -1,0 +1,31 @@
+{
+  "schema": "glaciereq.proof-receipt.v1",
+  "repository": "GlacierEQ/nvidia-gradient-integrity-quorum",
+  "source_sha": "2b3935d7a2f84c54f9ce2069a88bd27b21ee0d80a53bdc084d54a74d97a56a76",
+  "proof_id": "elite-nvidia-gradient-integrity-quorum-1786335149",
+  "environment": {
+    "python": "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python",
+    "PYTHONPATH": "/Users/kcbflux/job-app/repos/nvidia-gradient-integrity-quorum:/Users/kcbflux/job-app/repos/nvidia-gradient-integrity-quorum/src",
+    "entry": "unittest"
+  },
+  "tests": [
+    "/Users/kcbflux/job-app/excellence/.venv-elite/bin/python -m unittest discover -s tests -v (x2)"
+  ],
+  "adversarial_tests": [
+    "tests/test_adversarial.py"
+  ],
+  "runtime": {
+    "operate": "scripts/operate.py (x2)",
+    "dual_run_ok": true,
+    "proof_dual_run_ok": true
+  },
+  "result": "PASS",
+  "limitations": [
+    "not production deployed",
+    "reference implementation only"
+  ],
+  "timestamp": "2026-08-10T04:12Z",
+  "artifact_hashes": {
+    "operability_receipt": "601a2736572e406d2fbf60be2a5397dbb4a2e320e0ea60890263bd6ec908c19e"
+  }
+}
