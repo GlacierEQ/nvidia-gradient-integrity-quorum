@@ -11,12 +11,18 @@ from __future__ import annotations
 import hashlib
 import hmac
 import json
+import os
 import time
 from dataclasses import dataclass
 
 
-# Reference local operator secret (NOT production). Documented for re-verification.
-LOCAL_OPERATOR_SECRET = b"glaciereq-local-operator-promotion-authority-v1"
+PROMOTION_SECRET_ENV = "GLACIEREQ_PROMOTION_SECRET"
+
+
+def promotion_secret_from_environment() -> bytes | None:
+    """Load an explicitly configured promotion secret without shipping a default."""
+    value = os.environ.get(PROMOTION_SECRET_ENV)
+    return value.encode("utf-8") if value else None
 
 
 def _digest(obj: object) -> str:
@@ -82,7 +88,7 @@ def verify_bound_grant(
     grant_dict: dict,
     proof_receipt_path: str | bytes | "Path",
     *,
-    secret: bytes = LOCAL_OPERATOR_SECRET,
+    secret: bytes | None = None,
     now: float | None = None,
 ) -> tuple[bool, str | None]:
     """Verify a machine/promotion_authority.json grant against a proof receipt file.
@@ -94,6 +100,8 @@ def verify_bound_grant(
     Fail-closed on any mismatch.
     """
     from pathlib import Path as _P
+    if not secret:
+        return False, "PROMOTION_SECRET_REQUIRED"
     path = _P(proof_receipt_path)
     if not path.is_file():
         return False, "PROOF_RECEIPT_MISSING"

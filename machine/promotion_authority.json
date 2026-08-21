@@ -7,5 +7,5 @@
   "mac": "bed3bb2d1607cc302180ec2bd6b50e9799d8b7f97895aeec146450de0b987c42",
   "issuer": "local_operator_promotion_authority",
   "verified": true,
-  "secret_ref": "src/promotion_authority.py::LOCAL_OPERATOR_SECRET"
+  "secret_ref": "environment:GLACIEREQ_PROMOTION_SECRET"
 }
