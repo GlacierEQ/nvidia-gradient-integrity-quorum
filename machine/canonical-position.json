@@ -50,8 +50,7 @@
     "tests/test_adversarial.py",
     "machine/target-contract.json",
     "machine/proof_receipt.json",
-    "machine/operability_receipt.json",
-    "machine/promotion_authority.json"
+    "machine/operability_receipt.json"
   ],
   "nonclaims": [
     "no NVIDIA affiliation",
